@@ -89,10 +89,12 @@ function over0(roman){
 
 
 
-
+//dirver function
 function clicked(event){
   event.preventDefault();
   var counter = parseInt($("input#stringIn").val());
+  //turn var roman into a an array of integers, replace prevents non number charachters
+  //map states that it is a number and not an integer
   var roman = counter.toString(10).replace(/\D/g, '0').split('').map(Number);
   if (counter < 4000 && counter > 0) {
     if (counter >= 1000){
